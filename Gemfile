@@ -2,10 +2,15 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-gem 'devise'
+gem "codeclimate-test-reporter", group: :test, require: nil
+gem 'coveralls',require: false
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
+group :development, :test do
+  gem 'sqlite3'
+end
+gem 'activerecord'
+gem 'heroku'
+gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -43,3 +48,18 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do 
+gem 'rspec-rails' 
+gem 'factory_girl_rails'
+ end
+ group :test do 
+gem 'faker'
+ gem 'capybara' 
+gem 'guard'
+gem 'guard-rspec'
+ gem 'launchy'
+ end
+group :production do
+gem 'rails_12factor'
+gem 'pg'
+end
