@@ -1,6 +1,10 @@
 Intern::Application.routes.draw do
-  resources :blogs
+  resources :comments
 
+  resources :blogs
+resources :blogs do
+  resources :comments
+end
   get "welcome/index"
   devise_for :users
   root 'welcome#index'

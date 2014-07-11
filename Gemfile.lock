@@ -221,6 +221,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  addressable
   capybara
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)

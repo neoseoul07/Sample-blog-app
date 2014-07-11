@@ -14,6 +14,15 @@
   <strong>Description:</strong>
   <%= @blog.description %>
 </p>
-
+<h2>Add a comment:</h2>
+<%= form_for([@blog, @blog.comments.build]) do |f| %>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
