@@ -23,7 +23,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1/edit
   def edit
   end
-
+  def all
+  end
   # POST /blogs
   # POST /blogs.json
   def create
