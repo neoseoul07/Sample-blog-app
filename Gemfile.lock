@@ -28,6 +28,7 @@ GEM
     addressable (2.3.6)
     arel (4.0.2)
     bcrypt (3.1.7)
+    bootstrap_form (2.1.1)
     builder (3.1.4)
     capybara (2.4.1)
       mime-types (>= 1.16)
@@ -222,6 +223,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   addressable
+  bootstrap_form
   capybara
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)

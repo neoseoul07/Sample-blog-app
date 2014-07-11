@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'addressable'
 gem 'rails', '4.0.0'
+gem 'bootstrap_form'
 gem "codeclimate-test-reporter", group: :test, require: nil
 gem 'coveralls',require: false
 # Use sqlite3 as the database for Active Record
@@ -64,4 +65,3 @@ group :production do
 gem 'rails_12factor'
 gem 'pg'
 end
-ruby '2.0.0'
