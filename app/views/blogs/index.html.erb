@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>id</th>
+      <th>Author</th>
       <th>Title</th>
       <th>Description</th>
       <th></th>
@@ -15,11 +15,11 @@
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-        <td><%= blog.id %></td>
+        <td><%= blog.user.email %></td>
         <td><%= blog.title %></td>
         <td><%= blog.description %></td>
         <td><%= link_to 'Show', blog %></td>
-        <% if true# current_user.id==blog.user_id %>
+        <% if current_user.id==blog.user_id %>
 
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>

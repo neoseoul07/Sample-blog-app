@@ -4,8 +4,7 @@
       
       <h1> Welcome... <%= current_user.email %> </h1>
         <h1>Your blogs count is <%= current_user.blogs.count %> </h1>
-      <%= link_to 'See my blogs', blogs_path %>
-    <%= link_to 'See others blogs', '/blogs/all' %>
+      <%= link_to 'Blogs here', blogs_path %>
     <li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
   <% else %>
     <li><%= link_to "Sign in", new_user_session_path %></li>	

@@ -7,8 +7,11 @@
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
+
 <p>
 	<strong>Blog id:</strong>
 	<%= comment.blog_id %>
 <p>
+	<% if comment.user_id == current_user.id %>
 	<%= link_to "delete comment", comment_path(comment), method: :delete %>
+	<% end %>

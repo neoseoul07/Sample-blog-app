@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
 	@blog = Blog.find(params[:blog_id])
     @comment = @blog.comments.create(comment_params)
     @comment.user_id=current_user.id
+    @comment.id=Comment.all.count+1
     redirect_to blog_path(@blog)
 end
 def comment_params
@@ -15,4 +16,8 @@ def destroy
 	flash[:notice]="comment deleted successfully"
 	redirect_to blog_path(blog)
 end
+
+def edit
+	end
+
 end
