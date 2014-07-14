@@ -1,12 +1,13 @@
 class BlogsController < ApplicationController
  #layout 'standard'
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :blog_permissions, only: [:update, :destroy, :edit]
 
   # GET /blogs
   # GET /blogs.json
   def index
     if user_signed_in? 
-      @blogs = current_user.blogs  
+      @blogs = Blog.all 
     else redirect_to root_path
      end
   end
@@ -24,6 +25,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1/edit
   def edit
   end
+
   def all
   end
   # POST /blogs
@@ -32,7 +34,7 @@ class BlogsController < ApplicationController
     
     @blog = Blog.new(blog_params) 
     @blog.user_id = current_user.id
-    @blog.id=current_user.blogs.count+1
+    @blog.id=Blog.all.count+1
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
@@ -78,5 +80,11 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :description)
     end
-    
+
+    def blog_permissions
+      if @blog.user_id != current_user.id
+        flash[:notice]="You don't have permission"
+        redirect_to blogs_url 
+      end
+    end
 end

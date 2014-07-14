@@ -8,4 +8,7 @@
   <%= comment.body %>
 </p>
 <p>
+	<strong>Blog id:</strong>
+	<%= comment.blog_id %>
+<p>
 	<%= link_to "delete comment", comment_path(comment), method: :delete %>
