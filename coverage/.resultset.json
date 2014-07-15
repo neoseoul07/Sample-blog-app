@@ -421,6 +421,17 @@
         null,
         null
       ],
+      "/Users/zoomcartech/Desktop/project2/spec/factories/comments.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/zoomcartech/Desktop/project2/config/routes.rb": [
         1,
         1,
@@ -598,9 +609,15 @@
       ],
       "/Users/zoomcartech/Desktop/project2/spec/models/comment_spec.rb": [
         1,
+        1,
+        1,
+        null,
+        1,
         null,
         1,
         1,
+        null,
+        null,
         null
       ],
       "/Users/zoomcartech/Desktop/project2/app/models/comment.rb": [
@@ -654,6 +671,6 @@
         null
       ]
     },
-    "timestamp": 1405402461
+    "timestamp": 1405405443
   }
 }
