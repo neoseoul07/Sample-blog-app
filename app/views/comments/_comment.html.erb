@@ -12,6 +12,6 @@
 	<strong>Blog id:</strong>
 	<%= comment.blog_id %>
 <p>
-	<% if comment.user_id == current_user.id %>
+	<% if true#comment.user_id == current_user.id %>
 	<%= link_to "delete comment", comment_path(comment), method: :delete %>
 	<% end %>

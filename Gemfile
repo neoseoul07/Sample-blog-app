@@ -72,4 +72,5 @@ group :production do
 gem 'rails_12factor'
 gem 'pg'
 end
+gem 'simplecov',  :group => :test
 ruby '2.0.0'

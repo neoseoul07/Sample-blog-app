@@ -27,7 +27,7 @@ Intern::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true #modified for heroku
+  config.assets.compile = true #modified for heroku 
 
   # Generate digests for assets URLs.
   config.assets.digest = true

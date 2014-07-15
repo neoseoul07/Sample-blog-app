@@ -262,6 +262,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
+  simplecov
   sqlite3
   therubyracer
   turbolinks
