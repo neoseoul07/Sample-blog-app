@@ -33,6 +33,7 @@ require 'capybara/rspec'
 RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
   config.use_transactional_fixtures = false
+
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

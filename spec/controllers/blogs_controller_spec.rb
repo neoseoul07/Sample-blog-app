@@ -1,51 +1,92 @@
 require 'spec_helper'
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
-include Warden::Test::Helpers
-Warden.test_mode!
+#include Warden::Test::Helpers
+#include Devise::Test::Helpers
+#Warden.test_mode!
 describe BlogsController, :type => :controller  do 
 	
 
-def login_user(user)
-    sign_in user
-end
 
 before(:each) do
 DatabaseCleaner.clean
-login_user(FactoryGirl.create(:user))
+#Warden.test_reset!
+@user=FactoryGirl.create(:user)
+@user.save
+sign_in(@user)
+#@user.current_sign_in_at=Time.now
 end
 
 
 it "should have a current_user" do
-    subject.current_user.should_not be_nil
+    @user.should_not be_nil
+    #current_user
     # Warden.test_reset!
   end
 
   # logout(:user)
   
-describe "GET#new" do
+#logout
     it "renders the new template" do
       #expect(subject).to render_template(:new)
+      #sign_out(@user)
       get :new
+#expect(subject).to redirect_to root_path
       expect(subject).to render_template("new")
       #expect(subject).to render_template("blogs/new")
     end
-  end
 
-  describe "GET#blogs/:id" do
+    it "redirects to root path if user is not signed in" do
+     sign_out(@user)
+      #b = FactoryGirl.create(:blog)
+      #sign_out(@user)
+      get :new
+      #if user_signed_in?
+      # logout @u
+      expect(subject).to redirect_to root_path
+    end
+
     #login_user(FactoryGirl.create(:user))
   	it "renders the show page if user is signed in" do
+     #sign_out(@user)
       b = FactoryGirl.create(:blog)
-      subject{get :show, id: b.id}
+      #sign_out(@user)
+      get :show, id: b.id
+      #if user_signed_in?
+      # logout @u
       expect(subject).to render_template("show")
+      #end
       #  expect(subject).to render_template(:show)
 #      expect(subject).to redirect_to(:root_path)
   #  end
-    end
   end
 
-  #describe "GET#index" do
-   # it "renders the index page if user is signed in" do
+  it "redirects to root path if user is not signed in" do
+     sign_out(@user)
+      b = FactoryGirl.create(:blog)
+      #sign_out(@user)
+      get :show, id: b.id
+      #if user_signed_in?
+      # logout @u
+      expect(subject).to redirect_to root_path
+    end
 
 
+    it "renders the index page if user is signed in" do
+      get :index
+      expect(subject).to render_template("index")
+    end
+     # expect(subject)
+
+    it "redirects to root path if user is not signed in" do
+     sign_out(@user)
+#      b = FactoryGirl.create(:blog)
+      #sign_out(@user)
+      get :index
+      #if user_signed_in?
+      # logout @u
+      expect(subject).to redirect_to root_path
+    end
+
+    
 end

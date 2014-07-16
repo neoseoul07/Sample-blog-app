@@ -15,11 +15,19 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    if !user_signed_in?
+    redirect_to root_path
+  end
+
   end
 
   # GET /blogs/new
   def new
+    if !user_signed_in?
+    redirect_to root_path
+  else
     @blog = Blog.new
+  end
   end
 
   # GET /blogs/1/edit
