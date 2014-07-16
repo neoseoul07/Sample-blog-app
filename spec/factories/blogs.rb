@@ -2,7 +2,9 @@ require 'faker'
 
 FactoryGirl.define do
 	factory :blog do
-		description Faker::Lorem.characters(11)
-		title Faker::Lorem.characters(9)
+		id 7
+		user_id 1
+		description "fjksgkjrsdgnkjsdhn"
+		title "sdrgdgg"
 	end
 end

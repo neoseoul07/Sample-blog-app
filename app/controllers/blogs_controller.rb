@@ -42,7 +42,6 @@ class BlogsController < ApplicationController
     
     @blog = Blog.new(blog_params) 
     @blog.user_id = current_user.id
-    @blog.id=Blog.all.count+1
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }

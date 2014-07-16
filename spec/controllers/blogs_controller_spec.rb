@@ -35,6 +35,20 @@ it "should have a current_user" do
       expect(subject).to render_template("new")
       #expect(subject).to render_template("blogs/new")
     end
+    
+    it "renders show template after creating blog" do
+    b=FactoryGirl.create(:blog)
+      post :create, :blog => {title: b.title, description: b.description}
+      get :show, id: b.id
+      expect(subject).to render_template("show")
+    end
+
+    it "redirects to root_path if blogs params are not validated" do
+      b=Blog.create(:title=>"kjdfnskjdbvsvsn", :description=>"bdvsjdbvnsfbsnbksnbsjb")
+      post :create, :blog => {title: b.title, description: b.description}
+      #get :show, id: b.id
+     expect(subject).to render_template("new")
+   end
 
     it "redirects to root path if user is not signed in" do
      sign_out(@user)
@@ -88,5 +102,5 @@ it "should have a current_user" do
       expect(subject).to redirect_to root_path
     end
 
-    
+  
 end
