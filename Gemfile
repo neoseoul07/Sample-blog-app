@@ -7,6 +7,7 @@ gem 'rails', '4.0.0'
 gem 'less-rails'
 gem 'bootstrap_form'
 gem 'twitter-bootstrap-rails'
+gem 'database_cleaner'
 group :development do
   gem 'rails_layout'
 end

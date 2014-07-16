@@ -432,6 +432,16 @@
         null,
         null
       ],
+      "/Users/zoomcartech/Desktop/project2/spec/factories/users.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/zoomcartech/Desktop/project2/config/routes.rb": [
         1,
         1,
@@ -759,6 +769,25 @@
         null,
         1,
         null,
+        null,
+        null,
+        null
+      ],
+      "/Users/zoomcartech/Desktop/project2/spec/requests/user_registration_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
         null
       ],
       "/Users/zoomcartech/Desktop/project2/spec/routing/comments_routing_spec.rb": [
@@ -799,6 +828,6 @@
         null
       ]
     },
-    "timestamp": 1405419739
+    "timestamp": 1405496127
   }
 }
