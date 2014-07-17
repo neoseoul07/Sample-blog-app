@@ -1,8 +1,13 @@
 require 'spec_helper'
 require 'faker'
 require 'factory_girl_rails'
+
 describe Blog do
+	before(:each) do
+DatabaseCleaner.clean
+end
 it "has a valid factory" do
+	#DatabaseCleaner.clean
 FactoryGirl.create(:blog).should be_valid
 end
 it "is invalid without a title" do

@@ -1,7 +1,9 @@
 class BlogsController < ApplicationController
  #layout 'standard'
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :blog_permissions, only: [:update, :destroy, :edit]
+  before_action :blog_permissions, only: [:update, :destroy , :edit]
+  
+  #  before_action :blog_permissions,only: [:edit]
 
   # GET /blogs
   # GET /blogs.json
@@ -25,17 +27,20 @@ class BlogsController < ApplicationController
   def new
     if !user_signed_in?
     redirect_to root_path
-  else
+    else
     @blog = Blog.new
-  end
+    end
   end
 
   # GET /blogs/1/edit
   def edit
-  end
+    redirect_to root_path if !user_signed_in?
+ end
+
 
   def all
   end
+
   # POST /blogs
   # POST /blogs.json
   def create
@@ -58,9 +63,11 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
+ #       puts "update"
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
         format.json { head :no_content }
       else
+#        puts "no update"
         format.html { render action: 'edit' }
         format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
@@ -89,9 +96,14 @@ class BlogsController < ApplicationController
     end
 
     def blog_permissions
+      if user_signed_in?
       if @blog.user_id != current_user.id
         flash[:notice]="You don't have permission"
-        redirect_to blogs_url 
+       # puts "hellooooooo"
+        redirect_to blogs_url
+        else
+        #puts "hell" 
       end
+    end
     end
 end
