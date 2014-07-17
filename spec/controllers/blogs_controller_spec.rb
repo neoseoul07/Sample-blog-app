@@ -8,7 +8,7 @@ before(:each) do
 DatabaseCleaner.clean
 #Warden.test_reset!
 @user=FactoryGirl.create(:user)
-@user.save
+@user.save!
 sign_in(@user)
 #@user.current_sign_in_at=Time.now
 end
