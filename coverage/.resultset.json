@@ -714,6 +714,23 @@
         null,
         null
       ],
+      "/Users/zoomcartech/Desktop/project2/spec/controllers/welcome_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/zoomcartech/Desktop/project2/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/zoomcartech/Desktop/project2/spec/models/blog_spec.rb": [
         1,
         1,
@@ -866,6 +883,6 @@
         null
       ]
     },
-    "timestamp": 1405588886
+    "timestamp": 1405589307
   }
 }
