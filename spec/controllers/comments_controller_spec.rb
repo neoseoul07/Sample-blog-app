@@ -17,7 +17,16 @@ it "redirects to blog_path after creating comment" do
 	expect(subject).to redirect_to b
 end
 
-
+it "redirect_to blog_path after deleting comment" do
+	b=FactoryGirl.create(:blog)
+	c=FactoryGirl.create(:comment)
+	c.blog_id=b.id
+	c.save!
+	delete :destroy, id: c.id
+	#c = Comment.find(c.id)
+	#puts c.blog_id
+	expect(subject).to redirect_to b
+end
 
 
 end

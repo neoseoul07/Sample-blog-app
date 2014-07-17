@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-07-17T14:25:37+05:30">2014-07-17T14:25:37+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-07-17T14:51:26+05:30">2014-07-17T14:51:26+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.06%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.16
+         1.21
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>33</b> files in total.
-    <b>206</b> relevant lines. 
-    <span class="green"><b>202</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <b>212</b> relevant lines. 
+    <span class="green"><b>212</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#268e1c6e5f991bbb2d3b5aae00bca49bde42fde1" class="src_link" title="app/controllers/comments_controller.rb">app/controllers/comments_controller.rb</a></td>
-        <td class="red strong">73.33 %</td>
+        <td class="green strong">100.0 %</td>
         <td>23</td>
         <td>15</td>
-        <td>11</td>
-        <td>4</td>
-        <td>0.7</td>
+        <td>15</td>
+        <td>0</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -283,11 +283,11 @@
       <tr>
         <td class="strong"><a href="#eeb64108f116ba63b7358b135bb62087b6048620" class="src_link" title="spec/controllers/comments_controller_spec.rb">spec/controllers/comments_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>22</td>
-        <td>12</td>
-        <td>12</td>
+        <td>32</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -1119,11 +1119,11 @@
         <div class="source_table" id="268e1c6e5f991bbb2d3b5aae00bca49bde42fde1">
   <div class="header">
     <h3>app/controllers/comments_controller.rb</h3>
-    <h4><span class="red">73.33 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>15</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1208,26 +1208,26 @@
           <code class="ruby">def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">	blog=nil</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
           <code class="ruby">	Comment.find(params[:id]).tap{|comment| blog = comment.blog}.destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">	flash[:notice]=&quot;comment deleted successfully&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
           <code class="ruby">	redirect_to blog_path(blog)</code>
         </li>
@@ -4511,8 +4511,8 @@
     <h3>spec/controllers/comments_controller_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4544,8 +4544,8 @@
           <code class="ruby">	before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
           <code class="ruby">DatabaseCleaner.clean</code>
         </li>
@@ -4562,20 +4562,20 @@
           <code class="ruby">#@comment.save!</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">@user=FactoryGirl.create(:user)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">@user.save!</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
           <code class="ruby">sign_in(@user)</code>
         </li>
@@ -4610,10 +4610,10 @@
           <code class="ruby">	post :create, blog_id: b.id, comment:{body: &quot;jhsbdhjsvs&quot;}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="16">
           
-          <code class="ruby">	puts Comment.last.body</code>
+          
+          <code class="ruby">	#puts Comment.last.body</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
@@ -4634,19 +4634,79 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">it &quot;redirect_to blog_path after deleting comment&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	b=FactoryGirl.create(:blog)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	c=FactoryGirl.create(:comment)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	c.blog_id=b.id</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	c.save!</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	delete :destroy, id: c.id</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">	#c = Comment.find(c.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">	#puts c.blog_id</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	expect(subject).to redirect_to b</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">end</code>
@@ -4781,7 +4841,7 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">		blog_id Faker::Number.digit</code>
+          <code class="ruby">		blog_id 7</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
