@@ -5,4 +5,6 @@ class Blog < ActiveRecord::Base
                     length: { maximum: 10 }
     validates :description, presence: true,
                     length: { minimum: 10 }
+                    
+
 end

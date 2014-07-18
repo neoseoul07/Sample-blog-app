@@ -800,6 +800,7 @@
         1,
         null,
         1,
+        1,
         null,
         null,
         null,
@@ -811,7 +812,7 @@
         1,
         null,
         1,
-        null,
+        1,
         null
       ],
       "/Users/zoomcartech/Desktop/project2/spec/models/blog_spec.rb": [
@@ -848,6 +849,8 @@
         1,
         null,
         1,
+        null,
+        null,
         null,
         null
       ],
@@ -942,6 +945,6 @@
         null
       ]
     },
-    "timestamp": 1405599977
+    "timestamp": 1405684536
   }
 }

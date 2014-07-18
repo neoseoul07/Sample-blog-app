@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-07-17T17:56:17+05:30">2014-07-17T17:56:17+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-07-18T17:25:37+05:30">2014-07-18T17:25:37+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>37</b> files in total.
-    <b>236</b> relevant lines. 
-    <span class="green"><b>236</b> lines covered</span> and
+    <b>238</b> relevant lines. 
+    <span class="green"><b>238</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -133,7 +133,7 @@
       <tr>
         <td class="strong"><a href="#e0a06113610923cd34ac649811c802f3d985e046" class="src_link" title="app/models/blog.rb">app/models/blog.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
+        <td>10</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -413,9 +413,9 @@
       <tr>
         <td class="strong"><a href="#b39a5c8d52ca02c432f9ebf7444fd5655f71faa8" class="src_link" title="spec/support/devise_support.rb">spec/support/devise_support.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>18</td>
-        <td>6</td>
-        <td>6</td>
+        <td>19</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1531,6 +1531,18 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">                    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
@@ -6177,8 +6189,8 @@
     <h3>spec/support/devise_support.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6213,82 +6225,88 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">        @user ||= FactoryGirl.create :user</code>
+          <code class="ruby">        DatabaseCleaner.clean</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        @user ||= FactoryGirl.create :user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">        # We action the login request using the parameters before we begin.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
+          <code class="ruby">        # We action the login request using the parameters before we begin.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
           <code class="ruby">        # The login requests will match these to the user we just created in the factory, and authenticate us.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">        post_via_redirect user_session_path, &#39;user[email]&#39; =&gt; @user.email, &#39;user[password]&#39; =&gt; @user.password</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"># Configure these to modules as helpers in the appropriate tests.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">RSpec.configure do |config|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    # Include the help for the request specs.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">    config.include ValidUserRequestHelper, :type =&gt; :request</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #config.include ValidUserRequestHelper, :type =&gt; :controller</code>
+          <code class="ruby">    config.include ValidUserRequestHelper, :type =&gt; :view</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>

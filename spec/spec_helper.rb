@@ -8,15 +8,15 @@ ENV["RAILS_ENV"] ||='test'
 require File.expand_path("../../config/environment", __FILE__)
 #require 'rails/all'
 require 'rspec/rails'
-#require 'rspec/autorun'
+#require 'rspec/rspec'
 require 'factory_girl'
-#require 'capybara/rspec'
+require 'capybara/rails'
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
 RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
- # config.include Devise::TestHelpers, :type => :request
+  #config.include Warden::TestHelpers, :type => :feature
   config.use_transactional_fixtures = false
 
 # The settings below are suggested to provide a good initial experience

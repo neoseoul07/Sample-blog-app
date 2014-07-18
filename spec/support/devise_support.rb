@@ -2,6 +2,7 @@ module ValidUserRequestHelper
     # Define a method which signs in as a valid user.
     def sign_in_as_a_valid_user
         # ASk factory girl to generate a valid user for us.
+        DatabaseCleaner.clean
         @user ||= FactoryGirl.create :user
 
         # We action the login request using the parameters before we begin.
@@ -14,5 +15,5 @@ end
 RSpec.configure do |config|
     # Include the help for the request specs.
     config.include ValidUserRequestHelper, :type => :request
-    #config.include ValidUserRequestHelper, :type => :controller
+    config.include ValidUserRequestHelper, :type => :view
 end

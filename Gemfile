@@ -4,10 +4,12 @@ source 'https://rubygems.org'
 #gem 'taps'
 gem 'addressable'
 gem 'rails', '4.0.0'
+#gem 'cucumber-rails'
 gem 'less-rails'
 gem 'bootstrap_form'
 gem 'twitter-bootstrap-rails'
 gem 'database_cleaner'
+gem 'rspec-activemodel-mocks'
 group :development do
   gem 'rails_layout'
 end
@@ -68,6 +70,7 @@ gem 'faker'
 gem 'guard'
 gem 'guard-rspec'
  gem 'launchy'
+ gem 'warden'
  end
 group :production do
 gem 'rails_12factor'
