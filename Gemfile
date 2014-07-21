@@ -4,7 +4,11 @@ source 'https://rubygems.org'
 #gem 'taps'
 gem 'addressable'
 gem 'rails', '4.0.0'
-#gem 'cucumber-rails'
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  #gem 'database_cleaner'
+end
 gem 'less-rails'
 gem 'bootstrap_form'
 gem 'twitter-bootstrap-rails'

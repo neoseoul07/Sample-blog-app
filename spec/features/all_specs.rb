@@ -61,13 +61,17 @@ describe "showing blog", type: :feature do
     DatabaseCleaner.clean
     blog=FactoryGirl.create(:blog)
     user=FactoryGirl.create(:user)
-    blog.user_id=user.id
+   # blog.user_id=user.id
     login_as(user, :scope => :user)
     visit blogs_path
     click_link 'show'
-    puts blog.user.email
+    puts find(blog.user_id.email
     expect(page).to have_content "Comments"
   end
+
+  #describe "deleting blog", type: :feature do
+   # it "deletes the blog" do
+
 end
 
 
