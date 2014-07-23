@@ -1,10 +1,14 @@
 
+  
   <% if user_signed_in? %>
     
       
       <h1> Welcome... <%= current_user.email %> </h1>
         <h1>Your blogs count is <%= current_user.blogs.count %> </h1>
       <%= link_to 'Blogs here', blogs_path %>
+      <div id='ajaxtest'>
+      <%= link_to 'ajax', remote: true %>
+      </div>
     <li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
   <% else %>
     <li><%= link_to "Sign in", new_user_session_path %></li>	

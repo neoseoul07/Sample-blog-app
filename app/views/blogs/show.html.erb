@@ -14,10 +14,18 @@
   <strong>Description:</strong>
   <%= @blog.description %>
 </p>
+
+<div id="comments">
 <h2>Comments</h2>
-  <%=render @blog.comments %>
+<%=render @blog.comments %>
+</div>
+<div id="addcom"
 <h2>Add a comment:</h2>
 <%= render "comments/form" %>
+</div>
+<button type="button" onclick="myFunction()">Date</button> 
+<p id="demo"></p>
+
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
 <%= link_to "Logout", destroy_user_session_path, :method => :delete %>

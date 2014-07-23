@@ -1,4 +1,8 @@
+
 <h1>Listing blogs</h1>
+<button type="button" onclick="myFunction()">Date</button> <p id="demo"></p>
+
+
 
 <table>
   <thead>
@@ -29,9 +33,9 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'New Blog', new_blog_path , {remote: true , 'data-target' => '#modal-window'}%>
 <%= link_to 'Back', root_path %>
+<div id="modal-window"></div>
 <li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>

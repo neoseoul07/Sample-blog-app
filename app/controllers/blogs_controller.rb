@@ -30,6 +30,13 @@ class BlogsController < ApplicationController
     else
     @blog = Blog.new
     end
+    respond_to do |format|
+
+      format.html
+
+      format.js
+
+    end
   end
 
   # GET /blogs/1/edit
