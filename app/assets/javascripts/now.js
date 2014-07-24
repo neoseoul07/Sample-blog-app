@@ -1,5 +1,5 @@
 function myFunction() {
-    document.getElementById("dem").innerHTML = Date();
+    document.getElementById("demo").innerHTML = Date();
 }
 
 function ajaxcall(){

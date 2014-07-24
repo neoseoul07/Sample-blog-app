@@ -10,6 +10,12 @@ class BlogsController < ApplicationController
   def index
     if user_signed_in? 
       @blogs = Blog.all 
+      respond_to do |format|
+
+      format.html
+
+      format.js
+    end
     else redirect_to root_path
      end
   end
