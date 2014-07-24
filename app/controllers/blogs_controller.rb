@@ -29,7 +29,6 @@ class BlogsController < ApplicationController
     redirect_to root_path
     else
     @blog = Blog.new
-    end
     respond_to do |format|
 
       format.html
@@ -37,6 +36,7 @@ class BlogsController < ApplicationController
       format.js
 
     end
+  end
   end
 
   # GET /blogs/1/edit
