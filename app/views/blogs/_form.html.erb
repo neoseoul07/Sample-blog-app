@@ -20,6 +20,23 @@
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "create",class: "submit"%>
   </div>
 <% end %>
+
+<script>
+$(document).ready(function(){
+  $(".submit").click(function(){
+    t=$("#blog_title").val();
+    d=$("#blog_description").val();
+    $.ajax({
+      type: "POST"
+      url: "/blogs",
+      data: {title:t, description:d}
+      })
+    .done(function(){$("#temp").html("success");
+      });
+  });
+});
+</script>
+

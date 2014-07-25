@@ -18,7 +18,7 @@
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
+    <% Blog.all.each do |blog| %>
       <tr>
         <td><%= blog.user.email %></td>
         <td><%= blog.title %></td>
@@ -36,7 +36,8 @@
 </table>
 <br>
 
-<%= link_to 'New Blog', new_blog_path , {remote: true , 'data-target' => '#modal-window'}%>
+<%= link_to 'New Blog', new_blog_path , remote: true, 'data-target' => '#modal-window'%>
 <%= link_to 'Back', root_path %>
 <div id="modal-window"></div>
 <li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+<div id="temp"></div>

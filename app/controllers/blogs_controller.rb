@@ -35,13 +35,7 @@ class BlogsController < ApplicationController
     redirect_to root_path
     else
     @blog = Blog.new
-    respond_to do |format|
-
-      format.html
-
-      format.js
-
-    end
+    
   end
   end
 
@@ -60,15 +54,12 @@ class BlogsController < ApplicationController
     
     @blog = Blog.new(blog_params) 
     @blog.user_id = current_user.id
-    respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @blog }
+        render json: @blogs
       else
-        format.html { render action: 'new' }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
+        render json: {status: :unprocessable_entity}
       end
-    end
+       
   end
 
   # PATCH/PUT /blogs/1
