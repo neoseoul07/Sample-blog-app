@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
  #layout 'standard'
+ skip_before_filter  :verify_authenticity_token
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :blog_permissions, only: [:update, :destroy , :edit]
   
@@ -53,12 +54,19 @@ class BlogsController < ApplicationController
   def create
     
     @blog = Blog.new(blog_params) 
-    @blog.user_id = current_user.id
+   # @blog.user_id = current_user.id
+   respond_to do |format|
       if @blog.save
-        render json: @blogs
+ #       puts "update"
+        format.html { redirect_to @blog, notice: 'Blog was successfully created' }
+        format.json { head :no_content }
       else
-        render json: {status: :unprocessable_entity}
+#        puts "no update"
+        format.html { render action: 'new' }
+        format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
+    end
+      
        
   end
 

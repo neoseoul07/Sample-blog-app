@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>JQuery Test</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		$("button#b1").click(function() {
+alert("checked the button - worked");
+  	$.ajax({
+      type: "GET",
+      dataType: "JSON",
+      url: "/blogs/92",
+      success: function(data){
+      	
+      	var objectStr = JSON.stringify(data);
+      	$("#p1").append(objectStr + "\n");
+				
+				
+      }
+    }); 
+	});
+		$("#form").submit(function(event){
+			event.preventDefault();
+			var titleVal = $('#t').val();
+		var descVal = $('#d').val();
+
+	
+		$.post( "/blogs", { blog: {title: titleVal, description: descVal} }, 
+			function(data, status){
+				alert("checked the buttons ");
+				if(status=="success"){
+
+					alert(JSON.stringify(data));
+				}
+				
+			}
+			);
+
+		});
+	});
+		</script>
+	</head>
+
+	<body>
+		<div id = "div1">
+			<p id ="p1"></p>
+			<button id = "b1"> Get 1st Blog</button>
+		</div>
+
+		<form action="/" id="form">
+  <input type="text" id="t" >
+  <input type="textfield" id="d" >
+  <input type="submit" value="Submit">
+</form>
+
+	</body>
+	</html>

@@ -1,14 +1,10 @@
 
 <h1>Listing blogs</h1>
-<button type="button" onclick="myFunction()">Date</button> 
-<p id="demo"></p>
 
-
-
-<table>
+<table id="lblogs">
   <thead>
     <tr>
-      <th>Author</th>
+      
       <th>Title</th>
       <th>Description</th>
       <th></th>
@@ -20,7 +16,7 @@
   <tbody>
     <% Blog.all.each do |blog| %>
       <tr>
-        <td><%= blog.user.email %></td>
+        
         <td><%= blog.title %></td>
         <td><%= blog.description %></td>
         <td><%= link_to 'Show', blog %></td>
