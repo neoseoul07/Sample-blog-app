@@ -1,10 +1,11 @@
-
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.user_id %>
+</p>
+ 
 <p>
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
-	<% if true#comment.user_id == current_user.id %>
+<p>
 	<%= link_to "delete comment", comment_path(comment), method: :delete %>
-</br>
-	<% end %>
-</br>

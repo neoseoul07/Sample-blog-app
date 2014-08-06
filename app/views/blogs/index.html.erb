@@ -1,10 +1,9 @@
-
 <h1>Listing blogs</h1>
 
-<table id="lblogs">
+<table>
   <thead>
     <tr>
-      
+      <th>id</th>
       <th>Title</th>
       <th>Description</th>
       <th></th>
@@ -16,24 +15,21 @@
   <tbody>
     <% Blog.all.each do |blog| %>
       <tr>
-        
+        <td><%= blog.id %></td>
         <td><%= blog.title %></td>
         <td><%= blog.description %></td>
         <td><%= link_to 'Show', blog %></td>
         <% if current_user.id==blog.user_id %>
-
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete %></td>
-    <% end %>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
-
     <% end %>
   </tbody>
 </table>
+
 <br>
 
-<%= link_to 'New Blog', new_blog_path , remote: true, 'data-target' => '#modal-window'%>
+<%= link_to 'New Blog', new_blog_path %>
 <%= link_to 'Back', root_path %>
-<div id="modal-window"></div>
 <li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-<div id="temp"></div>
