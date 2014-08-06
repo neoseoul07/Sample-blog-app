@@ -3,7 +3,7 @@ require 'spec_helper'
 #include Devise::Test::Helpers
 #Warden.test_mode!
 describe BlogsController, :type => :controller  do 
-	
+
 before(:each) do
 DatabaseCleaner.clean
 #Warden.test_reset!
