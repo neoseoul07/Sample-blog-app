@@ -21,10 +21,6 @@ end
 gem "codeclimate-test-reporter", group: :test, require: nil
 gem 'coveralls',require: false
 gem 'therubyracer'
-# Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
 gem 'activerecord'
 gem 'heroku'
 gem 'devise'
@@ -77,9 +73,9 @@ gem 'guard-rspec'
  gem 'launchy'
  gem 'warden'
  end
+ gem 'pg'
 group :production do
 gem 'rails_12factor'
-gem 'pg'
 end
 gem 'simplecov',  :group => :test
 ruby '2.0.0'
