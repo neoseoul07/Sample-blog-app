@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-#gem 'taps'
+gem 'sqlite3'
 gem 'addressable'
 #gem "jquery-rails"
 gem 'rails', '4.0.0'
