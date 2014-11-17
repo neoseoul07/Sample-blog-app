@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'sqlite3'
 gem 'addressable'
 #gem "jquery-rails"
 gem 'rails', '4.0.0'
@@ -60,20 +59,21 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :development, :test do 
-gem 'rspec-rails' 
-gem 'factory_girl_rails'
- end
- group :test do 
-gem 'faker'
- gem 'capybara' 
-gem 'guard'
-gem 'guard-rspec'
- gem 'launchy'
- gem 'warden'
- end
- gem 'pg'
+	gem 'sqlite3'
+	gem 'rspec-rails' 
+	gem 'factory_girl_rails'
+end
+group :test do 
+	gem 'faker'
+ 	gem 'capybara' 
+	gem 'guard'
+	gem 'guard-rspec'
+ 	gem 'launchy'
+ 	gem 'warden'
+end
 group :production do
-gem 'rails_12factor'
+	gem 'pg'
+	gem 'rails_12factor'
 end
 gem 'simplecov',  :group => :test
 ruby '2.0.0'
