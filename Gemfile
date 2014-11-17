@@ -14,7 +14,6 @@ gem 'less-rails'
 gem 'bootstrap_form'
 gem 'twitter-bootstrap-rails'
 gem 'database_cleaner'
-gem 'rspec-activemodel-mocks'
 group :development do
   gem 'rails_layout'
 end
