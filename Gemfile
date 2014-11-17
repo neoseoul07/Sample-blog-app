@@ -22,7 +22,6 @@ gem "codeclimate-test-reporter", group: :test, require: nil
 gem 'coveralls',require: false
 gem 'therubyracer'
 gem 'activerecord'
-gem 'heroku'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
