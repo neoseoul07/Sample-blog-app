@@ -6,5 +6,3 @@
 
 <!--- Coveralls badge -->
 [![Coverage Status](https://coveralls.io/repos/tavvayaswanth567/project2/badge.png)](https://coveralls.io/r/tavvayaswanth567/project2)
-
-http://gentle-reaches-2379.herokuapp.com/
